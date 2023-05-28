@@ -40,8 +40,10 @@ public class CardTrick {
         Card userCard = new Card();
         userCard.setValue(number);
         userCard.setSuit(cards);
+        int luckyNum = 7;
+        String luckySuit = "Hearts";
 
-        if (c.getValue() == userCard.getValue() && c.getSuit().equalsIgnoreCase(userCard.getSuit())) {
+        if ((c.getValue() == userCard.getValue() && c.getSuit().equalsIgnoreCase(userCard.getSuit())) || (luckyNum== c.getValue() && luckySuit ==c.getSuit() ) ) {
             System.out.println("You win, it is in the magic hand");
         } else {
             System.out.println("You lose,it is not in the magic hand");
